@@ -1,0 +1,58 @@
+
+
+import bg.sofia.uni.fmi.mjt.simcity.plot.Plot;
+import bg.sofia.uni.fmi.mjt.simcity.property.Building;
+import bg.sofia.uni.fmi.mjt.simcity.property.School;
+import bg.sofia.uni.fmi.mjt.simcity.property.buildable.BuildableType;
+import bg.sofia.uni.fmi.mjt.simcity.utility.UtilityService;
+import bg.sofia.uni.fmi.mjt.simcity.utility.UtilityType;
+
+import java.util.List;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+
+
+
+
+
+	Plot<Building> plot = new Plot<>(5);
+
+        Building mgVarna = new School(2, BuildableType.COMMERCIAL, "MG D-r Petar Beron", 2000);
+        mgVarna.setWaterConsumption(200);
+        mgVarna.setElectricityConsumption(600);
+        mgVarna.setNaturalGasConsumption(50);
+        //plot.construct("adres1", mgVarna);
+
+        Building fmi = new School(3, BuildableType.COMMERCIAL, 250, 700, 40, "FMI", 1000);
+        //plot.construct("adres2", fmi);
+
+        Map<String, Building> schools = new HashMap<>();
+        schools.put("address1", mgVarna);
+        schools.put("address2", fmi);
+        //schools.put("address3", null);
+
+        plot.constructAll(schools);
+
+        System.out.println(plot.getAllBuildables());
+
+        Map<UtilityType, Double> taxRates = new HashMap<>();
+        taxRates.put(UtilityType.WATER, 0.3);
+        taxRates.put(UtilityType.ELECTRICITY, 0.25);
+        taxRates.put(UtilityType.NATURAL_GAS, 0.1);
+        UtilityService services = new UtilityService(taxRates);
+
+        List<Double> costsMG = new ArrayList<>();
+        costsMG.add(services.getUtilityCosts(UtilityType.WATER, mgVarna));
+        costsMG.add(services.getUtilityCosts(UtilityType.ELECTRICITY, mgVarna));
+        costsMG.add(services.getUtilityCosts(UtilityType.NATURAL_GAS, mgVarna));
+        System.out.println(costsMG);
+
+        List<Double> costsFMI = new ArrayList<>();
+        costsFMI.add(services.getUtilityCosts(UtilityType.WATER, fmi));
+        costsFMI.add(services.getUtilityCosts(UtilityType.ELECTRICITY, fmi));
+        costsFMI.add(services.getUtilityCosts(UtilityType.NATURAL_GAS, fmi));
+        System.out.println(costsFMI);
+
+        System.out.println(services.computeCostsDifference(mgVarna, fmi));
