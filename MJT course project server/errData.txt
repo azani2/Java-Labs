@@ -1,0 +1,7 @@
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
+	at bg.sofia.uni.fmi.mjt.todoist.server.TodoistServer.getClientInput(TodoistServer.java:37)
+	at bg.sofia.uni.fmi.mjt.todoist.server.TodoistServer.start(TodoistServer.java:94)
+	at bg.sofia.uni.fmi.mjt.todoist.server.ServerRunner.run(ServerRunner.java:14)
+	at java.base/java.lang.Thread.run(Thread.java:1583)

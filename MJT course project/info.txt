@@ -1,0 +1,20 @@
+Type login to enter login prompt or register to enter registration prompt.
+Please type task names and descriptions in double brackets "...".
+Please type all dates in the following format: d/m/yyyy , for example: 21/05/2024.
+To exit, please type the command \"exit\". During login or registration prompt, please type "exit-pr" in either password or username field to exit the prompt, then type "exit".
+Supported commands:
+    login
+    register
+    add-task --name=<name> --date=<date> --due-date=<due-date> --description=<description>
+    update-task --name=<name> --date=<date> --due-date=<due-date> --description=<description>
+    update-task --name=<name> --date=<date> --due-date=<due-date> --description=<description>
+    delete-task --name=<task_name>
+    delete-task --name=<task_name> --date=<date>
+    get-task --name=<task_name>
+    get-task --name=<task_name> --date=<date>
+    list-tasks
+    list-tasks --completed
+    list-tasks --date=<date>
+    list-dashboard
+    finish-task --name=<name>
+    add-collaboration --name=<name>
