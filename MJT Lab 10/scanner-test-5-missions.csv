@@ -1,0 +1,8 @@
+Unnamed: 0,Company Name,Location,Datum,Detail,Status Rocket," Rocket",Status Mission
+115,Roscosmos,"Site 81/24, Baikonur Cosmodrome, Kazakhstan","Mon Aug 05, 2019",Proton-M/Briz-M | Cosmos 2539,StatusActive,"65.0 ",Success
+116,Roscosmos,"Site 81/24, Baikonur Cosmodrome, Kazakhstan","Wed Jul 31, 2019",Soyuz 2.1a | Progress MS-12,StatusActive,"48.5 ",Success
+126,Roscosmos,"Site 1S, Vostochny Cosmodrome, Russia","Fri Jul 05, 2019","Soyuz 2.1b/Fregat-M | Meteor-M No.2-2, Landmapper-BC 5 & 6, and Others",StatusActive,,Success
+118,CASC,"LC-3, Xichang Satellite Launch Center, China","Fri Jul 26, 2019",Long March 2C | Yaogan-30-05,StatusActive,"30.8 ",Success
+110,CASC,"LC-3, Xichang Satellite Launch Center, China","Mon Aug 19, 2019",Long March 3B/E | ChinaSat 18,StatusActive,"29.15 ",Success
+1,CASC,"Site 9401 (SLS-2), Jiuquan Satellite Launch Center, China","Thu Aug 06, 2020",Long March 2D | Gaofen-9 04 & Q-SAT,StatusActive,"29.75 ",Success
+0,SpaceX,"LC-39A, Kennedy Space Center, Florida, USA","Fri Aug 07, 2020",Falcon 9 Block 5 | Starlink V1 L9 & BlackSky,StatusActive,"50.0 ",Success
